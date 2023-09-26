@@ -35,7 +35,7 @@ def para_espaco(nome_pokemon):
 # funcao para verificar se existe em db
 
 
-def existe_time(nome_pokemon, db):
+def existe_Pokemon(nome_pokemon, db):
     ex = False
     for i in range(len(db)):
         if db[i] == nome_pokemon:
@@ -44,22 +44,22 @@ def existe_time(nome_pokemon, db):
     return ex
 
 
-# função para verificar index do time na lista
+# função para verificar index do Pokemon na lista
 
 
-def index_time(nome_pokemon, db):
+def index_Pokemon(nome_pokemon, db):
     for i in range(len(db)):
         if db[i] == nome_pokemon:
-            index_time = i
+            index_Pokemon = i
             break
-    return index_time
+    return index_Pokemon
 
 
-# função para adicionar time na lista
+# função para adicionar Pokemon na lista
 
 
 def adicionar(nome_pokemon, db):
-    if not existe_time(nome_pokemon, db):
+    if not existe_Pokemon(nome_pokemon, db):
         print(db)
         nome_pokemon.lower()                       # minusculo
         nome_pokemon2 = para_espaco(nome_pokemon)
@@ -68,23 +68,23 @@ def adicionar(nome_pokemon, db):
         return db
 
 
-# função para editar nome de um time
+# função para editar nome de um Pokemon
 
 
 def editar(nome_atual, novo_nome, db):
-    if existe_time(nome_atual, db) and not existe_time(novo_nome, db):
-        index = index_time(nome_atual, db)
+    if existe_Pokemon(nome_atual, db) and not existe_Pokemon(novo_nome, db):
+        index = index_Pokemon(nome_atual, db)
         db[index] = novo_nome
         db.sort()
         return db
 
 
-# função para apagar nome de um time
+# função para apagar nome de um Pokemon
 
 
 def deletar(nome_pokemon, db):
-    if existe_time(nome_pokemon, db):
-        index = index_time(nome_pokemon, db)
+    if existe_Pokemon(nome_pokemon, db):
+        index = index_Pokemon(nome_pokemon, db)
         del (db[index])
         return db
 
