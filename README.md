@@ -5,5 +5,4 @@ Projeto para executar um CRUD numa lista de Pokemons, usando FastAPI e Python, a
 
 # EM CONSTRUÇÃO
 
-[!WARNING]
 EM CONSTRUÇÃO.
